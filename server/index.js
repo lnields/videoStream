@@ -9,10 +9,12 @@ const PORT = 4000;
 const CHAT_MESSAGE_EVENT = "chatMessage";
 const PLAY_EVENT = "play";
 const PAUSE_EVENT = "pause";
+const SEEK_EVENT = "seek"
+const SYNC = "sync"
 
 io.on("connection", (socket) => {
   console.log(`Client ${socket.id} connected`);
-
+	socket.send(SYNC)
   // Join a conversation
   const { roomId } = socket.handshake.query;
   socket.join(roomId);
@@ -27,13 +29,17 @@ io.on("connection", (socket) => {
     console.log(`Client ${socket.id} diconnected`);
     socket.leave(roomId);
   });
-	socket.on(PLAY_EVENT, () => {
+	socket.on(PLAY_EVENT, time => {
 		console.log('client playing video');
-		io.emit(PLAY_EVENT);
-});
-socket.on(PAUSE_EVENT, time => {
-		console.log('client paused video');
-		io.emit(PAUSE_EVENT, time);
+		io.emit(PLAY_EVENT, time);
+	});
+	socket.on(PAUSE_EVENT, time => {
+			console.log('client paused video');
+			io.emit(PAUSE_EVENT, time);
+	});
+	socket.on(SEEK_EVENT, time => {
+		console.log('client seeked video');
+ 		io.emit(SEEK_EVENT, time);
 });
 });
 
