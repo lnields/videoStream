@@ -27,7 +27,7 @@ const VideoPlayer = (props) =>{
 			sendSeek(document.getElementById('video').currentTime)}
 		}
 	const handlePlay = () =>{
-		sendPlay();
+		sendPlay(document.getElementById('video').currentTime);
 	}
 
 	return(

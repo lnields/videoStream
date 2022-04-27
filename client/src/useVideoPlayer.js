@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
-
+const SYNC = "sync";
 const PLAY_EVENT = "play";
 const PAUSE_EVENT = "pause";
 const SEEK_EVENT = "seek";
@@ -17,10 +17,17 @@ const useVideoPlayer = (roomId) => {
       query: { roomId },
     });
 
-    socketRef.current.on(PLAY_EVENT, () => {
+    socketRef.current.on(PLAY_EVENT, (timeStamp) => {
+			if (timeStamp !== currentTime){
+				setCurrentTime(timeStamp)
+			}
 			setPlaying(true)
 			console.log("play event herd")
     });
+		socketRef.current.emit(SYNC, () => {
+			console.log("play event herd")
+			// send a message to the server
+		});
 		socketRef.current.on(PAUSE_EVENT, (timeStamp) => {
 			console.log(timeStamp)
 			if (timeStamp !== currentTime){
