@@ -1,0 +1,68 @@
+.chat-room-container {
+		height: 100%;
+    position: bottom;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.room-name {
+    margin-top: 0;
+}
+
+.messages-container {
+    flex: 1;
+    min-height: 50px;
+    overflow: auto;
+    border: 1px solid black;
+    border-radius: 7px 7px 0 0;
+}
+
+.messages-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.new-message-input-field {
+    height: 50px;
+    max-height: 50%;
+    font-size: 10px;
+    padding: 12px 20px;
+    resize: none;
+}
+
+.message-item {
+    width: 50%;
+    margin: 8px;
+    padding: 12px 8px;
+    word-break: break-word;
+    border-radius: 4px;
+    color: white;
+}
+
+.my-message {
+    background-color: rgb(0, 132, 255);
+    margin-left: auto;
+}
+
+.received-message {
+    background-color: #3f4042;
+    margin-right: auto;
+}
+
+.send-message-button {
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    background: gray;
+    padding: 10px 6px;
+    border: none;
+}
+
+.messages-container, .new-message-input-field, .send-message-button {
+    border-color: #9a9a9a;
+}
