@@ -9252,7 +9252,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.4"
 
-"prop-types@^15.0.0", "prop-types@^15.5.6", "prop-types@^15.5.7", "prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0", "prop-types@^15.5.6", "prop-types@^15.5.7", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -9792,6 +9792,11 @@
     "raf" "^3.4.1"
     "regenerator-runtime" "^0.13.3"
     "whatwg-fetch" "^3.0.0"
+
+"react-banner@^1.0.3":
+  "integrity" "sha512-0CXzDZFe6nxGZPR1Y0qb3WPvoy56G40lWKZLpSRfklpL9lIEZLhOFzBavStaehzIfMjmppEVpSkbrnOTocZbnw=="
+  "resolved" "https://registry.npmjs.org/react-banner/-/react-banner-1.0.3.tgz"
+  "version" "1.0.3"
 
 "react-dev-utils@^10.2.1":
   "integrity" "sha512-XxTbgJnYZmxuPtY3y/UV0D8/65NKkmaia4rXzViknVnZeVlklSh8u6TnaEYPfAi/Gh1TP4mEOXHI6jQOPbeakQ=="

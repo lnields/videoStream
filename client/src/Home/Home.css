@@ -17,7 +17,9 @@
 .text-input-field:focus {
     outline: none;
 }
-
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+}
 .enter-room-button {
     margin-top: 20px;
     padding: 20px 10px;
