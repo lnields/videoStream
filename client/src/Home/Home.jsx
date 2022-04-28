@@ -21,7 +21,7 @@ const Home = () => {
 		<PageHeader
 			className="site-page-header"
 			title="Bob"
-			avatar={{ src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' }}
+			avatar={{ src: 'https://github.com/lnields/videoStream/blob/finsihing-touches/client/public/bobo.png?raw=true' }}
 		/>
 	</div>
     <div className="home-container">
