@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { PageHeader } from 'antd';
+import 'react-banner/dist/style.css'
 import "./Home.css";
+
 
 const Home = () => {
   const [roomName, setRoomName] = React.useState("");
@@ -14,7 +16,16 @@ const Home = () => {
   };
 
   return (
+		<div>
+	<div>
+		<PageHeader
+			className="site-page-header"
+			title="Bob"
+			avatar={{ src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' }}
+		/>
+	</div>
     <div className="home-container">
+
       <input
         type="text"
         placeholder="Room"
@@ -33,6 +44,7 @@ const Home = () => {
         Join room
       </Link>
     </div>
+		</div>
   );
 };
 
