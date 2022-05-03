@@ -1,0 +1,33 @@
+.home-container {
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.text-input-field {
+    padding: 20px 10px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.text-input-field:focus {
+    outline: none;
+}
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+}
+.enter-room-button {
+    margin-top: 20px;
+    padding: 20px 10px;
+    font-size: 25px;
+    background: blue;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+}
