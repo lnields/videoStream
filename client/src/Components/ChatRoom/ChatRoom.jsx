@@ -1,22 +1,23 @@
 import React from "react";
 import "./ChatRoom.css";
-import useChat from "../../Use/useChat";
 import moment from 'moment';
 
 
 const ChatRoom = (props) => {
-  const { roomId, name } = props;
-  const { messages, sendMessage } = useChat(roomId);
+	const sendMessage = props.sendMessage;
+	const name = props.name;
+	const messages = props.messages;
+  
   const [message, setMessage] = React.useState("");
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
   };
 
-const time = 'time:' + moment().format('h:mm a');
+const time = moment().format('h:mm a');
 
   const handleSendMessage = () => {
-    sendMessage(name.concat(": ", message));
+    sendMessage(name.concat(": ", message), time);
     setMessage("");
   };
 
@@ -25,10 +26,10 @@ const time = 'time:' + moment().format('h:mm a');
       <div className="messages-container">
         <ol className="messages-list">
           {messages.map((message, i) => (
-            <ul>
+            <ul key={i} className="no-bullets">
               
             <li
-              key={i}
+              
               className={`message-item ${
                 message.ownedByCurrentUser ? "my-message" : "received-message"
               }`}
@@ -41,7 +42,7 @@ const time = 'time:' + moment().format('h:mm a');
               message.ownedByCurrentUser ? "my-timestamp" : "received-timestamp"
             }`}
           >
-            {time}
+            {message.time}
           </li>
           </ul>
           ))}

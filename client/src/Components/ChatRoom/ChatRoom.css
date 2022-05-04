@@ -9,6 +9,11 @@
 	flex-direction: column;
 	margin: 16px;
 }
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
 
 .room-name {
 	margin-top: 0;
@@ -38,7 +43,7 @@
 .message-item {
 	width: 50%;
 	margin: 8px;
-	padding: 12px 8px;
+	padding: 10px 5px;
 	word-break: break-word;
 	border-radius: 4px;
 	color: white;
@@ -69,10 +74,7 @@
 
 .time-item {
 	width: 50%;
-	margin: 8px;
-	padding: 1px 8px;
-	word-break: break-word;
-	border-radius: 4px;
+	
 	color: gray;
 }
 .my-timestamp {
@@ -81,6 +83,6 @@
 }
 
 .received-timestamp {
-	
+	padding: 0px 10px;
 	margin-right: auto;
 }

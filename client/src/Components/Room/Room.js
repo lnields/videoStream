@@ -8,6 +8,7 @@ import './Room.css';
 import { PageHeader } from 'antd';
 import 'react-banner/dist/style.css'
 import { Link } from "react-router-dom";
+import useChat from "../../Use/useChat";
 
 
 
@@ -22,7 +23,8 @@ const Room = (props) => {
   const onClose = () => {
     setVisible(false);
   };
-	
+	const { roomId, name } = { ...props.match.params};
+	const { messages, sendMessage } = useChat(roomId);
 
   return (
     <>
@@ -42,7 +44,7 @@ const Room = (props) => {
 				<VideoPlayer { ...props.match.params}/>
 			</div>
       <Drawer title="Chat" placement="left" onClose={onClose} visible={visible} >
-				<ChatRoom { ...props.match.params}/>
+				<ChatRoom name={name} messages={messages} sendMessage={sendMessage}/>
       </Drawer>
     </>
   );

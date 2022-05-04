@@ -33,7 +33,7 @@ const VideoPlayer = (props) =>{
 	return(
 		<video id = "video" width="100%" height="auto" controls
 			onPlay={handlePlay} onPause={handlePause} onSeeked={handleSeek}>
-		<source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" type = "video/mp4" autoplay="false"/>
+		<source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" type = "video/mp4" autoPlay={false}/>
 		</video>
 		
 )}
